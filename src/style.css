@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Assistant&display=swap");
+:root {
+  --clr-base: #F8F8F8;
+  --clr-primary: #DEDEDE;
+  --clr-secondary: #101010;
+  --font-family: 'Assistant', sans-serif;
+  --device-l: 1024px;
+  --device-m: 768px;
+  --device-s: 576px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  color: inherit;
+  text-underline-offset: 1px;
+}
+
+body {
+  font-family: var(--font-family);
+  background-color: var(--clr-base);
+  overflow-x: hidden;
+}
+
+p {
+  line-height: 1.5;
+}
+
+img {
+  width: 100%;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 32px;
+}
+
+p {
+  padding: 10px 0;
+  width: 55ch;
+}
+
+.container, .navigation, .hero, .info__one, .info__two {
+  max-width: var(--device-l);
+  margin-left: auto;
+  margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container > *, .navigation > *, .hero > *, .info__one > *, .info__two > * {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
+}
+
+.btn {
+  background-color: var(--clr-secondary);
+  color: var(--clr-base);
+  border: none;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+
+.info__bar {
+  text-align: center;
+  background: var(--clr-secondary);
+  color: var(--clr-base);
+  width: unset;
+}
+
+.info__bar span {
+  text-decoration: underline;
+  text-underline-offset: 1px;
+}
+
+header {
+  background: var(--clr-primary);
+}
+
+.navigation {
+  padding: 20px 0;
+  width: 100%;
+  font-weight: bold;
+}
+
+.navigation .navigation__items {
+  display: inherit;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
+}
+
+.navigation .navigation__hamburger {
+  display: none;
+}
+
+.navigation .navigation__items {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+
+.navigation .navigation__items .navigation__items-link:nth-of-type(4),
+.navigation .navigation__items .navigation__items-link:nth-of-type(1) {
+  margin-left: auto;
+}
+
+.navigation .navigation__items > * {
+  margin-left: 30px;
+}
+
+.hero {
+  gap: 80px;
+  padding: 30px 0;
+}
+
+.hero .hero__left input {
+  padding-block: 10px;
+  padding-left: 20px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.hero .hero__left input::-webkit-input-placeholder {
+  color: var(--clr-primary);
+}
+
+.hero .hero__left input:-ms-input-placeholder {
+  color: var(--clr-primary);
+}
+
+.hero .hero__left input::-ms-input-placeholder {
+  color: var(--clr-primary);
+}
+
+.hero .hero__left input::placeholder {
+  color: var(--clr-primary);
+}
+
+.hero .hero__left input:focus-visible {
+  outline: 2px solid var(--clr-base);
+}
+
+.hero .hero__left .hero__benefits p {
+  padding-block: 2px;
+}
+
+.hero .hero__left .hero__benefits p::before {
+  content: url("./assets/Checkmark.svg");
+  padding-right: 10px;
+  vertical-align: top;
+}
+
+.logos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.logos img {
+  margin: 40px 10px;
+  width: auto;
+  height: 25px;
+}
+
+.info__one {
+  background-color: var(--clr-primary);
+}
+
+.info__one .info__one__left {
+  padding-left: 70px;
+}
+
+.info__one img {
+  width: 200%;
+  -webkit-transform: translate(-50%, 5px);
+          transform: translate(-50%, 5px);
+}
+
+.info__two {
+  margin-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.info__two img {
+  width: 115%;
+}
+
+.info__two .info__two__right {
+  padding-left: 120px;
+  margin-bottom: 80px;
+}
+
+@media (max-width: 768px) {
+  .container, .navigation, .hero, .info__one, .info__two {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 90%;
+  }
+  .container > *, .navigation > *, .hero > *, .info__one > *, .info__two > * {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+  }
+  .info__two img {
+    width: 105%;
+  }
+}
+/*# sourceMappingURL=style.css.map */

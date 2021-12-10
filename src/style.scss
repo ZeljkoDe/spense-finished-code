@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Assistant&display=swap');
+
+:root {
+	--clr-base: #F8F8F8;
+	--clr-primary: #DEDEDE;
+	--clr-secondary: #101010;
+
+	--font-family: 'Assistant', sans-serif;
+
+	--device-l: 1024px;
+	--device-m: 768px;
+	--device-s: 576px; 
+}
+
+// jovo nanovo
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	color: inherit;
+	text-underline-offset: 1px;
+}
+// nas stil
+
+body {
+	font-family: var(--font-family);
+	background-color: var(--clr-base);
+	overflow-x: hidden;
+}
+
+p {
+	line-height: 1.5;
+
+}
+
+img {
+	width: 100%;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+h2 {
+	font-size: 32px;
+}
+
+p {
+	padding: 10px 0;
+	width: 55ch;
+}
+
+
+
+.container {
+	max-width: var(--device-l);
+	margin-left: auto;
+	margin-right: auto;
+	display: flex;
+	align-items: center;
+
+	& > * {
+		flex: 0 0 50%;
+	}
+}
+
+.btn {
+	background-color: var(--clr-secondary);
+	color: var(--clr-base);
+	border: none;
+	padding: 10px 15px;
+	border-radius: 5px;
+}
+
+.info__bar {
+	text-align: center;
+	background: var(--clr-secondary);
+	color: var(--clr-base);
+	width: unset;
+
+	span {
+		text-decoration: underline;
+		text-underline-offset: 1px;
+	}
+}
+
+header {
+	background: var(--clr-primary);
+}
+
+.navigation {
+	@extend .container;
+	
+	padding: 20px 0;
+	width: 100%;
+	font-weight: bold;
+
+	.navigation__items {
+		display: inherit;
+		align-items: inherit;
+	}
+
+	.navigation__hamburger{
+		display: none;
+	}
+
+	.navigation__items {
+		flex-grow: 1;
+
+		.navigation__items-link:nth-of-type(4), 
+		.navigation__items-link:nth-of-type(1) {
+			margin-left: auto;
+		}
+
+		& > * {
+			margin-left: 30px;
+		}
+	}
+}
+
+.hero {
+	@extend .container;
+
+	gap: 80px;
+	padding: 30px 0;
+
+	.hero__left {
+		input {
+			padding-block: 10px;
+			padding-left: 20px;
+			border: 1px solid lightgray;
+			border-radius: 5px;
+			margin-right: 10px;
+			margin-top: 20px;
+
+			&::placeholder {
+				color: var(--clr-primary);
+			}
+
+			&:focus-visible {
+				outline: 2px solid var(--clr-base);
+			}
+
+		}
+
+		.hero__benefits {
+			p {
+				padding-block: 2px;
+				
+				&::before {
+					content: url('./assets/Checkmark.svg');
+					padding-right: 10px;
+					vertical-align: top;
+				}
+			}
+		}
+	
+	}
+}
+
+.logos {
+	display: flex;
+	justify-content: center;
+	 img {
+		 margin: 40px 10px;
+		 width: auto;
+		 height: 25px;
+	 }
+}
+
+.info__one {
+	@extend .container;
+
+	background-color: var(--clr-primary);
+
+	.info__one__left {
+		padding-left: 70px;
+		// z-index: 2;
+	}
+
+	img {
+		width: 200%;
+		transform: translate(-50%, 5px);
+	}
+}
+
+.info__two {
+	@extend .container;
+	margin-top: 80px;
+	display: flex;
+	align-items: center;
+
+	img {
+		width: 115%;
+	}
+
+	.info__two__right {
+		padding-left: 120px;
+		margin-bottom: 80px;
+	}
+}
+
+@media (max-width: 768px) {
+	.container {
+		flex-wrap: wrap;
+		width: 90%;
+
+		& > * {
+		flex: 0 0 100%;
+	}
+ }
+
+ .info__two img {
+	 width: 105%;
+ }
+
+}
