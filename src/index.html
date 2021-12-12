@@ -13,23 +13,23 @@
 <body>
 
 	<p class="info__bar">🎉 To celebrate Spense's launch, we will be waiving all feels for the entire month of
-		April.<span>
+		April.<u>
 			You
 			will be receiving 100%
 			of the earnings.
-		</span>🎉</p>
+		</u>🎉</p>
 
 	<header>
 		<nav class="navigation">
 			<div class="navigation__logo">spense.</div>
-			<img class="navigation__hamburger" src="./assets/Hamburger Menu.svg" alt="hamburger icon">
+			<span class="navigation__hamburger active"></span>
 			<ul class="navigation__items">
-				<li class="navigation__items-link">Business</li>
+				<li class="navigation__items-link"><a href="#">Business</a></li>
 				<li class="navigation__items-link">Pricing</li>
 				<li class="navigation__items-link">Features</li>
 				<li class="navigation__items-link">Login</li>
 				<li class="navigation__items-link"><button class="btn">Get Started</button></li>
-				</div>
+			</ul>
 		</nav>
 		<main class="hero">
 			<div class="hero__left">
@@ -53,7 +53,8 @@
 			</div>
 		</main>
 	</header>
-	<section class="logos">
+
+	<section class="logos containersspaco">
 		<img src="./assets/Facebook Logo.png" alt="">
 		<img src="./assets/Dribbble Logo.png" alt="">
 		<img src="./assets/Youtube Logo.png" alt="">
@@ -91,9 +92,48 @@
 			</p>
 			<a href="#"><strong>Text Editor Live Demo &#8594;</strong></a>
 		</div>
+	</section>
+	<footer class="footer">
+		<div class="footer__wrapper">
+			<div class="footer__item about-us">
+				<p class="footer__heading">spens.</span>
+				<p>Spense is an open platform for individuals to share their unfiltered thoughts. Discuss the topics you love,
+					and
+					get paid
+					for doing</p>
+			</div>
+			<div class="footer__item">
+				<p class="footer__heading">Sitemap</span>
+				<p>Homepage</p>
+			</div>
+			<div class="footer__item">
+				<p class="footer__heading">Resources</p>
+				<p>Support</p>
+				<p>Contact</p>
+				<p>FAQ</p>
+			</div>
+			<div class="footer__item">
+				<p class="footer__heading">Company</p>
+				<p>About</p>
+				<p>Customer</p>
+				<p>Blog</p>
+			</div>
+			<div class="footer__item">
+				<p class="footer__heading">Opportunities</p>
+			</div>
+		</div>
+	</footer>
 
-	</section>
-	</section>
+	<script>
+		const hamburger = document.querySelector('.navigation__hamburger');
+
+		const toggleMenuItems = () => {
+			document.querySelector('.navigation__items').classList.toggle('active');
+			hamburger.classList.toggle('toggle')
+		};
+
+		hamburger.addEventListener('click', toggleMenuItems);
+	</script>
 	<!-- 🎉 To celebrate Spense's launch, we will be waiving all feels for the entire month of April. You will be receiving	100%	of the earnings.🎉
 
 	spense.
